@@ -16,3 +16,9 @@ if (Number.isFinite(productQuantity) === true) {
 } else {
   alert('Вы ввели некорректные данные!');
 }
+
+
+
+
+
+
