@@ -2,12 +2,12 @@
 
 // первая задача
 const productName = prompt('Введите наименование товара:');
-let productQuantity = Number(prompt('Введите количество товара:'));
+let productQuantity = +(prompt('Введите количество товара:'));
 
-if (Number.isFinite(productQuantity) === true) {
+if (Number.isNaN(productQuantity) === false) {
   const productCategory = prompt('Введите категорию товара:');
-  let productPrice = Number(prompt('Введите стоимость товара:'));
-    if (Number.isFinite(productPrice) === true) {
+  let productPrice = +(prompt('Введите стоимость товара:'));
+    if (Number.isNaN(productPrice) === false) {
       let totalPrice = productQuantity * productPrice;
       console.log(`На складе ${productQuantity} единиц товара "${productName}" на сумму ${totalPrice} рублей.`);
     } else {
@@ -16,9 +16,4 @@ if (Number.isFinite(productQuantity) === true) {
 } else {
   alert('Вы ввели некорректные данные!');
 }
-
-
-
-
-
 
