@@ -28,9 +28,7 @@ const calculateTotalSum = (sum, quantity, promocode) => {
 
   const bigSumDiscount = getBigSumDiscount(quantityDiscount);
 
-  const promoDiscount = getPromoDiscount(bigSumDiscount, promocode)
-
-  return promoDiscount;
+  return getPromoDiscount(bigSumDiscount, promocode);
 };
 
 // примеры вывода

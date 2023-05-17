@@ -33,7 +33,7 @@ if (freeEducation >= 265) {
 // alert(freeEducation >= 265 ? 'Поздравляю, вы поступили на бюджет!' : 'К сожалению вам не хватило баллов!');
 
 // червертая задача
-const howMuchMoney = +(prompt('Сколько денег хотете снять?'));
+const howMuchMoney = +prompt('Сколько денег хотете снять?');
 // так
 if (howMuchMoney % 100 === 0) {
   console.log('Возьмите Ваши деньги!');
