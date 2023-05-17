@@ -7,7 +7,8 @@ const modifyString = (text) => {
   resultText = resultText[0].toUpperCase() + resultText.slice(1);
 
   return resultText;
-};
+}
 
 const resultString = modifyString(prompt('Введите текст:'));
 alert(resultString);
+
