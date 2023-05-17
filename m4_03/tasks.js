@@ -5,18 +5,23 @@ const rain = Math.round(Math.random());
 
 console.log(rain);
 
-if (rain === 1) {
+if (rain) {
   console.log('Пошёл дождь. Возьмите зонт!');
-}
-
-if (rain === 0) {
+} else {
   console.log('Дождя нет!');
 }
 
+// if (rain === 1) {
+//   console.log('Пошёл дождь. Возьмите зонт!');
+// }
+// if (rain === 0) {
+//   console.log('Дождя нет!');
+// }
+
 // третья задача
-const pointsMath = +(prompt('Введите кол-во баллов по математике:'));
-const pointsRussian = +(prompt('Введите кол-во баллов по русскому языку:'));
-const pointsInformatic = +(prompt('Введите кол-во баллов по информатике:'));
+const pointsMath = +prompt('Введите кол-во баллов по математике:');
+const pointsRussian = +prompt('Введите кол-во баллов по русскому языку:');
+const pointsInformatic = +prompt('Введите кол-во баллов по информатике:');
 const freeEducation = pointsMath + pointsRussian + pointsInformatic;
 // так
 if (freeEducation >= 265) {

@@ -1,11 +1,6 @@
 'use strict';
 
-const minNumber = (a, b) => {
-  const firstNumber = a;
-  const secondNumber = b;
-  const min = a < b && firstNumber || b < a && secondNumber;
-  return min;
-};
+const minNumber = (a, b) => a < b && a || b < a && b;
 
 const minResult = minNumber(
   +prompt('Введите первое число:'),
