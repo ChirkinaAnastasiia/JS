@@ -5,14 +5,14 @@ const getQuantityDiscount = (sum, quantity) => {
     return sum - sum * 0.03;
   }
   return sum;
-}
+};
 
 const getBigSumDiscount = (quantityDiscount) => {
   if (quantityDiscount > 30000) {
     return quantityDiscount - (quantityDiscount - 30000) * 0.15;
   }
   return quantityDiscount;
-}
+};
 
 const getPromoDiscount = (bigSumDiscount, promocode) => {
   if (promocode === 'METHED') {
@@ -21,7 +21,7 @@ const getPromoDiscount = (bigSumDiscount, promocode) => {
     return bigSumDiscount - 500;
   }
   return bigSumDiscount;
-}
+};
 
 const calculateTotalSum = (sum, quantity, promocode) => {
   const quantityDiscount = getQuantityDiscount(sum, quantity);
@@ -31,7 +31,7 @@ const calculateTotalSum = (sum, quantity, promocode) => {
   const promoDiscount = getPromoDiscount(bigSumDiscount, promocode)
 
   return promoDiscount;
-}
+};
 
 // примеры вывода
 const resultExample1 = calculateTotalSum(1000, 15);

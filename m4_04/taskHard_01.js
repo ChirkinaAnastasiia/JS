@@ -18,8 +18,8 @@ const nod = (a, b) => {
     if (thirdNumber === 0) {
       return firstNumber;
     }
-  }
-}
+  };
+};
 
 const nodResult = nod(
   +prompt('Введите первое число:'),

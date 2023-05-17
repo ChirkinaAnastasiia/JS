@@ -5,7 +5,7 @@ const minNumber = (a, b) => {
   const secondNumber = b;
   const min = a < b && firstNumber || b < a && secondNumber;
   return min;
-}
+};
 
 const minResult = minNumber(
   +prompt('Введите первое число:'),
