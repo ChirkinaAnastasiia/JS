@@ -485,16 +485,128 @@
 
 
 
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 4                             //
+///////////////////////////                       ///////////////////////////
 
 
 
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 5                             //
+///////////////////////////                       ///////////////////////////
 
 
 
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 6                             //
+///////////////////////////                       ///////////////////////////
 
+// const array1 = [];
+// const array2 = [1, 2, 3];
+// let array3 = new Array();
+// let array4 = new Array(1,2);
+// let array5 = new Array(10);
+// console.log(array5);
 
+// const animals = ['cat', 'dog',,, 'rat'];
+// console.log(animals.length);
+// animals.lenght = 10;
+// console.log(animals);
+// console.log(animals.length);
+// console.log(animals[4]);
+// console.log(animals[5]);
 
+//////////////////////////////////
+// const animals = ['cat', 'dog',,, 'rat'];
+// animals.lenght = 2;
+// console.log(animals);
 
+// console.log(animals[1]);
+// console.log(animals[0]);
+// console.log(animals[animals.length - 1]);
+// console.log(animals[animals.length - 2]);
+// console.log(animals[animals.length - 4]);
+// console.log(animals[9]);
 
+// animals[1] = 'bird';
+// console.log(animals);
 
+// animals[3] = 'fish';
+// console.log(animals);
 
+// animals = [1, 2];
+
+//////////////////////////////////
+// const array = [1, 2, 3];
+// console.log(array);
+
+// array[4] = 0;
+// console.log(array);
+
+// array.push(4, 5);
+// console.log(array);
+
+// array.unshift(4, 5);
+// console.log(array);
+
+// array.pop();
+// array.pop();
+// array.shift();
+// console.log(array);
+
+// const one = array.pop();
+// console.log(one);
+
+// const two = array.shift();
+// console.log(two);
+
+// delete array[1];
+// console.log(array);
+
+//////////////////////////////////
+// const animals = ['cat', 'dog', 'mouse'];
+
+// const printArr = arr => {
+//   console.log(`Размер массива ${arr.length}`);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const elem = arr[i];
+//     // console.log(`Элемент под индексом ${i} - ${arr[i]}`);
+//     console.log(`Элемент под индексом ${i} - ${elem}`);
+//   }
+
+//   for (const key in arr) {
+//     console.log(`Элемент под индексом ${key} - ${arr[key]}`);
+//   }
+
+//   for (const element of arr) {
+//     console.log(`Элемент ${element}`);
+//   }
+// };
+
+// printArr(animals);
+
+//////////////////////////////////
+// const arr = [1, 2, 3];
+
+// console.log(typeof arr);
+// console.log(Array.isArray(arr));
+// console.log(Array.isArray([]));
+// console.log(Array.isArray([1, 2]));
+// console.log(Array.isArray(new Array()));
+
+// console.log(Array.isArray(10));
+// console.log(Array.isArray(true));
+// console.log(Array.isArray({}));
+// console.log(Array.isArray('string'));
+
+//////////////////////////////////
+// const foo = function() {
+//   console.log(arguments);
+//   console.log(Array.isArray(arguments));
+// };
+
+// foo();
+// foo(1, 2);
+
+//////////////////////////////////
