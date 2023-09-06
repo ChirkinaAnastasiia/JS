@@ -510,7 +510,7 @@
 
 // const animals = ['cat', 'dog',,, 'rat'];
 // console.log(animals.length);
-// animals.lenght = 10;
+// animals.length = 10;
 // console.log(animals);
 // console.log(animals.length);
 // console.log(animals[4]);
@@ -518,7 +518,7 @@
 
 //////////////////////////////////
 // const animals = ['cat', 'dog',,, 'rat'];
-// animals.lenght = 2;
+// animals.length = 2;
 // console.log(animals);
 
 // console.log(animals[1]);
@@ -610,3 +610,359 @@
 // foo(1, 2);
 
 //////////////////////////////////
+// const numbers = [0, 1, 2, 3, 4, 5];
+
+// const newNum = 'string';
+// const newNumbers = numbers.splice(2, 3, 'a', newNum);
+// const newNumbers2 = numbers.splice(2, 'd');
+// console.log(numbers);
+// console.log(newNumbers);
+// console.log(newNumbers2);
+
+//////////////////////////////////
+// const numbers = [0, 1, 2, 3, 4, 5];
+
+// console.log(numbers.includes(4));
+// console.log(numbers.includes('f'));
+
+//////////////////////////////////
+// const numbers = [0, 1, 2, 3, 4, 5];
+
+// console.log(numbers.join());
+// console.log(numbers.join(''));
+// console.log(numbers.join(' '));
+// console.log(numbers.join(' # '));
+// console.log(numbers.join(', '));
+// console.log(numbers.join(9));
+
+//////////////////////////////////
+// const numbers = [2, 101, 168, 55, 227, -4389, 7, 454, 591, -29, 19];
+// const alphabet = ['a', 'A', 'ann', 'hi', 'hoy', 'Zon', 'za', 'diz', 'daw', 'D'];
+// const multi = ['хот', 23, 'Ave', 'acer', -17, 'sos', 'za', 'Zar', -129, 'аюм', 2389, 'ёт', 'Арк', 'Ёж', 33, 3157];
+
+// const sortNumbers = arr => {
+//   console.log(numbers);
+
+//   arr.sort();
+//   console.log(numbers);
+
+//   arr.sort((a, b) => a - b);
+//   console.log(numbers);
+
+//   arr.sort((a, b) => b - a);
+//   console.log(numbers);
+
+//   return arr;
+// };
+// sortNumbers(numbers);
+
+// const sortAlphabet = arr => {
+//   console.log(alphabet);
+
+//   arr.sort();
+//   console.log(alphabet);
+
+//   return arr;
+// };
+// sortAlphabet(alphabet);
+
+// const sortMulti = arr => {
+//   console.log(multi);
+
+//   arr.sort();
+//   console.log(multi);
+
+//   arr.sort((a, b) => a - b);
+//   console.log(multi);
+
+//   arr.sort((a, b) => b - a);
+//   console.log(multi);
+
+//   return arr;
+// };
+// sortMulti(multi);
+
+//////////////////////////////////
+// const numbers = [2, 101, 168, 55, 227, -4389, 7, 454, 591, -29, 19];
+
+// console.log(numbers.reverse());
+
+// const sortNumbers = arr => {
+//   console.log(numbers);
+
+//   arr.sort((a, b) => a - b);
+//   console.log(numbers);
+
+//   return arr.reverse();
+// };
+// console.log(sortNumbers(numbers));
+
+//////////////////////////////////
+// const numbers = [0, 1, 2, 3, 4];
+
+// console.log(numbers[1]);
+// const a = numbers[3];
+// console.log(a);
+
+// const [x, ,,, y, z] = numbers;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// const numbers1 = [0, [1, 2], [3, 4]];
+
+// const [, b, c] = numbers1;
+// console.log(b);
+// console.log(c);
+
+// const [, [d, e], f] = numbers1;
+// console.log(d);
+// console.log(e);
+// console.log(f);
+
+// const numbers2 = [0, 1, 2];
+
+// const [,, j = 9, i = 8] = numbers2;
+// console.log(j);
+// console.log(i);
+
+//////////////////////////////////
+// const numbers = [0, 1, 2, 3, 4];
+
+// const [x, y, ...rest] = numbers;
+// console.log(rest);
+
+// const string = 'Hello!';
+// const [a, b, ...str] = string;
+// console.log(str);
+// console.log(str.join(''));
+
+// const string2 = 'heLLo!';
+// const [c, ...str2] = string2;
+
+// const newString2 = c.toLocaleUpperCase() + str2.join('').toLowerCase();
+// console.log(newString2);
+
+//////////////////////////////////
+// const numbers = [1, 2, 3, 4];
+// const newNumbers = [11, 22, 33, 44, ...numbers];
+// console.log(newNumbers);
+
+// const newNumbers2 = [11, 22, ...numbers, 33, 44];
+// console.log(newNumbers2);
+
+// const newNumbers3 = [...numbers, 11, 22, ...numbers, 33, 44, ...newNumbers];
+// console.log(newNumbers3);
+
+// const cloneNumbers = [...numbers];
+// console.log(cloneNumbers);
+// console.log(cloneNumbers === numbers);
+
+// cloneNumbers[2] = 333;
+// console.log(cloneNumbers);
+// console.log(numbers);
+
+// const otherNumbers = numbers;
+// console.log(otherNumbers === numbers);
+
+// otherNumbers[2] = 333;
+// console.log(otherNumbers);
+// console.log(numbers);
+
+// numbers[0] = 1111;
+// console.log(cloneNumbers);
+// console.log(otherNumbers);
+// console.log(numbers);
+
+//////////////////////////////////
+// const numbers = [1, 2, 3, 4];
+
+// const newNumbers = numbers.slice();
+// const newNumbers2 = numbers.slice(2);
+// console.log(newNumbers);
+// console.log(newNumbers2);
+
+// console.log(newNumbers === numbers);
+// numbers.push(5, 6, 7);
+// console.log(numbers);
+// console.log(newNumbers);
+
+//////////////////////////////////
+// const numbers = [1, 2, 3, 4];
+
+// const concatNumbers = [1, 2].concat(numbers);
+// console.log(concatNumbers);
+
+////////////////////////////////
+// const numbers = [2, 101, 168, 55, 227, -4389, 7, 454, 591, -29, 19];
+
+// const sortNumbers = arr => {
+//   console.log(numbers);
+
+//   arr.sort((a, b) => a - b);
+//   console.log(numbers);
+
+//   return arr;
+// };
+
+// const newNumbers = sortNumbers(numbers);
+// console.log(numbers);
+// console.log(newNumbers);
+
+
+// const numbers2 = [2, 101, 168, 55, 227, -4389, 7, 454, 591, -29, 19];
+
+// const sortNumbers2 = arr => {
+//   console.log(numbers2);
+
+//   // const cloneNumbers = [...arr];
+//   const cloneNumbers = [...numbers2];
+
+//   cloneNumbers.sort((a, b) => a - b);
+
+//   return cloneNumbers;
+// };
+
+// const newNumbers2 = sortNumbers2(numbers2);
+// console.log(numbers2);
+// console.log(newNumbers2);
+
+
+// const numbers3 = [2, 101, 168, 55, 227, -4389, 7, 454, 591, -29, 19];
+
+// const sortNumbers3 = ([...arr]) => {
+//   console.log(numbers3);
+
+//   arr.sort((a, b) => a - b);
+
+//   return arr;
+// };
+
+// const newNumbers3 = sortNumbers3(numbers3);
+// console.log(numbers3);
+// console.log(newNumbers3);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5];
+
+// const foo = arr => {
+//   const newNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     // newNumbers[i] = arr[i] ** 2;
+//     newNumbers.push(arr[i] ** 2);
+//   }
+
+//   return newNumbers;
+// };
+
+// console.log(foo(numbers));
+// console.log(numbers);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5];
+
+// const foo = arr => {
+//   const newNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if(!(arr[i] % 2)) {
+//       // newNumbers[i] = arr[i];     //empty
+//       newNumbers.push(arr[i]);
+//     }
+//   }
+
+//   return newNumbers;
+// };
+
+// console.log(foo(numbers)); //новый [с чётными]  
+// console.log(numbers);      //if((arr[i] % 2))  новый [с нечётными]
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5];
+
+// const foo = arr => {
+//   const newNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if((arr[i] % 2)) {
+//       newNumbers.push(arr[i]);
+//     } else {
+//       newNumbers.push(arr[i] + 1);
+//     }
+//   }
+
+//   return newNumbers;
+// };
+
+// console.log(foo(numbers)); 
+// console.log(numbers);
+
+////////////////////////////////
+// const numbers = [1, 201, 3, 4, 5, 22];
+
+// const foo = arr => {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] > 200) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// };
+
+// console.log(foo(numbers));  //если есть хотя бы 1 > 200 //false  //каждый должен быть не > 200
+
+////////////////////////////////
+// const numbers = [1, 201, 3, 4, 5, 22];
+
+// const foo = arr => {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] > 200) {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// };
+
+// console.log(foo(numbers));  //если есть хотя бы 1 > 200, выполняет условие //true // хоть 1 > 200
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5];
+
+// const foo = arr => {
+//   let n = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     n += arr[i];
+//   }
+
+//   return n;
+// };
+
+// console.log(foo(numbers));  //сумма всех чисел  // 15
+// console.log(numbers);       // -=  //-15
+
+////////////////////////////////
+// const numbers = [8, 11, 7];
+
+// const foo = arr => {
+//   let n = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2) {
+//       n += arr[i];
+//     } else {
+//       n -= arr[i];
+//     }
+//   }
+
+//   return n;
+// };
+
+// console.log(foo(numbers));  // есть остаток % 2  - эти складывает
+// console.log(numbers);       // нет остатка - делает отрицательными 
+//                             // (складывает отрицательные и вычитает эту сумму из положительных)
