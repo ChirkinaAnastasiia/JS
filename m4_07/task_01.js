@@ -16,3 +16,4 @@ const getArray = (length) => {
 };
 
 console.log(getArray(10));
+

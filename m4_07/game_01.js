@@ -11,34 +11,33 @@ const randomNumber = getRandomNumber(1, 100);
 console.log(randomNumber);
 
 const playGame = () => {
-  let playerAnswer = +prompt(`Я загадал число от 1 до 100. Попробуй его угадать. Ввведи свой вариант:`);
+  let playerAnswer = prompt(`Я загадал число от 1 до 100. Псс... это ${randomNumber}! Попробуй его угадать. Ввведи свой вариант:`);
 
   while (playerAnswer !== randomNumber) {
-    if (Number.isNaN(playerAnswer)) {
+    if (Number.isNaN(+playerAnswer)) {
       alert(`Введи число!`);
-      playerAnswer = +prompt(`Попробуй ещё раз!`);
+      playerAnswer = prompt(`Попробуй ещё раз!`);
     }
 
     if (playerAnswer > randomNumber && playerAnswer !== null && playerAnswer !== 0) { 
       alert(`Меньше!`);
-      playerAnswer = +prompt(`Попробуй ещё раз!`);
+      playerAnswer = prompt(`Попробуй ещё раз!`);
     }
   
     if (playerAnswer < randomNumber && playerAnswer !== null && playerAnswer !== 0) {
       alert(`Больше!`);
-      playerAnswer = +prompt(`Попробуй ещё раз!`);    //если здесь убрать !== 0, при нажатии "Отмена", выводит "Больше"
+      playerAnswer = prompt(`Попробуй ещё раз!`);
     }
   
-    if (playerAnswer === randomNumber) {
-      alert(`Правильно!`);
+    if (+playerAnswer === randomNumber) {
+      return alert(`Правильно!`);
     }
 
     if (playerAnswer === null) {
-      alert(`Game Over`);                   // почему не выводит alert?
+      return alert(`Конец игры!`);
     }
   }
 };
 
 playGame();
 
-// как сделать, чтобы, когда игрок вводит 0, всплывало "Больше"?
