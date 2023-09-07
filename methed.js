@@ -967,17 +967,194 @@
 // console.log(numbers);       // нет остатка - делает отрицательными 
 //                             // (складывает отрицательные и вычитает эту сумму из положительных)
 
+////////////////////////////////
+// const numbers = [1, 2, 3];
 
-
-///////////////////////////                       ///////////////////////////
-//                             Модуль 4 Урок 6                             //
-///////////////////////////                       ///////////////////////////
-
-
-const numbers = [1, 2, 3, 4, 5];
-
-
-
-
+// console.log(numbers.length);
+// console.log(numbers[0]);
+// console.log(numbers[numbers.length - 1]);
+// console.log(numbers[numbers.length - 2]);
 
 ////////////////////////////////
+
+
+
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 7                             //
+///////////////////////////                       ///////////////////////////
+
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const newArr = numbers.forEach((item, index, arr) => {
+//   // console.log(item);
+//   // console.log(index);
+//   // console.log(arr);
+//   console.log(item, index);
+// });
+// console.log(newArr);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 1, 2, 3];
+
+// const newArr = numbers.find((item) => {
+//   return item === 3;
+// });
+// console.log(newArr);
+
+// const newArr2 = numbers.find(item => item % 2 === 0);
+// console.log(newArr2);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 1, 2, 3];
+
+// const newArr = numbers.filter((item) => {
+//   return item === 3;
+// });
+// console.log(newArr);
+
+// const newArr2 = numbers.filter(item => item > 0 && item < 2);
+// console.log(newArr2);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 1, 2, 3];
+
+// const newArr = numbers.findIndex((item) => {
+//   return item === 1;
+// });
+// console.log(newArr);
+
+// const newArr2 = numbers.findIndex(item => !(item % 3));
+// console.log(newArr2);
+
+// console.log(numbers. indexOf(1));
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 1, 2, 3];
+// const newArr = numbers.map((item) => {
+//   return item === 1;
+// });
+// console.log(newArr);
+
+// const newArr2 = numbers.map(item => item * 2);
+// console.log(newArr2);
+
+// const newArr3 = numbers.map(item => item.toString());
+// console.log(newArr3);
+
+// const words = ['hEllO', 'woRLd'];
+// const newWords = words.map(item => 
+//   item[0].toUpperCase() + item.slice(1).toLowerCase());
+// console.log(newWords);
+
+// const numbers2 = [1, 2, 3, 1, 2, 3];
+// const newArr4 = numbers2.map((item) => {
+//   const n = item * 2;
+
+//   if (n > 5) return null;
+//   return item;
+// });
+// console.log(newArr4);
+
+////////////////////////////////
+// const numbers = [1, '2', 3, '1', 2, 3];
+// const newArr = numbers.some(item => typeof item === 'string');
+// console.log(newArr);
+
+// const numbers2 = [1, 2, 3, 1, 2, 3];
+// const newAr2 = numbers2.some(item => typeof item === 'string');
+// console.log(newAr2);
+
+////////////////////////////////
+// const numbers = [1, '2', 3, '1', 2, 3];
+// const newArr = numbers.every(item => typeof item === 'number');
+// console.log(newArr);
+
+// const numbers2 = [1, 2, 3, 1, 2, 3];
+// const newAr2 = numbers2.every(item => typeof item === 'number');
+// console.log(newAr2);
+
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5];
+// const newAr = numbers.reduce((acc, item , index, arr) => {
+//   console.log(acc);
+//   // return 3;
+//   // return item;
+//   return item + acc;
+// });
+// console.log(newAr);
+
+// const newAr2 = numbers.reduce((acc, item , index, arr) => {
+//   console.log(acc);
+//   return item + acc;
+// }, 0);
+// console.log(newAr2);
+
+// const newAr3 = numbers.reduce((acc, item , index, arr) => {
+//   console.log(acc);
+//   return item * acc;
+// }, 1);
+// console.log(newAr3);
+
+////////////////////////////////
+// const scientist = [
+//   {
+//     name: 'mendeleev',
+//     count: 4
+//   },
+//   {
+//     name: 'aristotel',
+//     count: 7
+//   }
+// ];
+
+// const newItem = scientist.reduce((acc, item, i, arr) => {
+//   return acc + item.count;
+// }, 0);
+// console.log(newItem);
+
+// const newItem2 = scientist.reduce((acc, item, i, arr) => {
+//   return acc + item.count;
+// });
+// console.log(newItem2);
+
+// const newItem3 = scientist.reduce((acc, item, i, arr) => {
+//   return acc + item.name + ', ';
+// }, '');
+// console.log(newItem3);
+
+// const newItem4 = scientist.reduceRight((acc, item, i, arr) => {
+//   return acc + item.name + ', ';
+// }, '');
+// console.log(newItem4);
+
+////////////////////////////////
+// const numbers = [[1, 2], [3, 4], 5, 6, [[7, 8], [9, 10]]];
+
+// console.log(numbers.flat());
+// console.log(numbers.flat().flat());
+// console.log(numbers.flat(2));
+// console.log(numbers.flat(Infinity));
+
+// const phrases = ['Привет мир!', 'Как дела?'];
+// const allWords = phrases.map(str => str.split(' '));
+// console.log(allWords);
+
+// const allWords2 = phrases.flatMap(str => str.split(' '));
+// console.log(allWords2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 8                             //
+///////////////////////////                       ///////////////////////////

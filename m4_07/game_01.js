@@ -13,8 +13,8 @@ console.log(randomNumber);
 const playGame = () => {
   let playerAnswer = prompt(`Я загадал число от 1 до 100. Псс... это ${randomNumber}! Попробуй его угадать. Ввведи свой вариант:`);
 
-  while (playerAnswer !== randomNumber) {
-    if (Number.isNaN(+playerAnswer)) {
+  while (playerAnswer !== randomNumber) { 
+    if (Number.isNaN(+playerAnswer) || playerAnswer === '' || !(playerAnswer.trim())) {
       alert(`Введи число!`);
       playerAnswer = prompt(`Попробуй ещё раз!`);
     }
@@ -23,8 +23,13 @@ const playGame = () => {
       alert(`Меньше!`);
       playerAnswer = prompt(`Попробуй ещё раз!`);
     }
+    
+    if (playerAnswer > randomNumber && playerAnswer !== null) { 
+      alert(`Меньше!`);
+      playerAnswer = prompt(`Попробуй ещё раз!`);
+    } 
   
-    if (playerAnswer < randomNumber && playerAnswer !== null) {
+    if (playerAnswer < randomNumber && playerAnswer !== null && playerAnswer !== '' && playerAnswer.trim()) {
       alert(`Больше!`);
       playerAnswer = prompt(`Попробуй ещё раз!`);
     }
@@ -40,4 +45,5 @@ const playGame = () => {
 };
 
 playGame();
+
 
