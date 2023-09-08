@@ -975,8 +975,28 @@
 // console.log(numbers[numbers.length - 1]);
 // console.log(numbers[numbers.length - 2]);
 
-////////////////////////////////
+// console.log(numbers.at(-1));
+// console.log(numbers.at(-2));
+// console.log(numbers.at(-5));
 
+////////////////////////////////
+// const num = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+// console.log(num[0][1]);
+// console.log(num[2][2]);
+
+////////////////////////////////
+// console.log([] + 1);
+// console.log([1] + 1);
+// console.log([1, 2] + 1);
+
+// console.log('' + 1);
+// console.log('1' + 1);
+// console.log('1,2' + 1);
 
 
 ///////////////////////////                       ///////////////////////////
@@ -1076,7 +1096,7 @@
 
 ////////////////////////////////
 // const numbers = [1, 2, 3, 4, 5];
-// const newAr = numbers.reduce((acc, item , index, arr) => {
+// const newAr = numbers.reduce((accumulator, item , index, arr) => {
 //   console.log(acc);
 //   // return 3;
 //   // return item;
@@ -1143,15 +1163,20 @@
 // const allWords2 = phrases.flatMap(str => str.split(' '));
 // console.log(allWords2);
 
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5, 6];
 
+// console.log(numbers.fill('f', 2, 4));
+// console.log(numbers.fill('z', 4));
+// console.log(numbers.fill(9));
 
+////////////////////////////////
+// const numbers = [1, 2, 3, 4, 5, 6];
 
-
-
-
-
-
-
+// // console.log(numbers.copyWithin(0, 2));
+// // console.log(numbers.copyWithin(0, 2, 4));
+// // console.log(numbers.copyWithin(0, -2, -1));
+// console.log(numbers.copyWithin(5, -2, -1));
 
 
 

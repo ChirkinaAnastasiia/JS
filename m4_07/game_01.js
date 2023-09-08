@@ -19,15 +19,10 @@ const playGame = () => {
       playerAnswer = prompt(`Попробуй ещё раз!`);
     }
 
-    if (playerAnswer > randomNumber && playerAnswer !== null) { 
+    if (playerAnswer > randomNumber) { 
       alert(`Меньше!`);
       playerAnswer = prompt(`Попробуй ещё раз!`);
     }
-    
-    if (playerAnswer > randomNumber && playerAnswer !== null) { 
-      alert(`Меньше!`);
-      playerAnswer = prompt(`Попробуй ещё раз!`);
-    } 
   
     if (playerAnswer < randomNumber && playerAnswer !== null && playerAnswer !== '' && playerAnswer.trim()) {
       alert(`Больше!`);
