@@ -108,11 +108,11 @@ const playGame = () => {
       }
   
       if (playerAnswer > randomNumber) { 
-        alert(`Больше!`);
+        alert(`Загаданное число меньше! Количество оставшихся попыток - ${attemptsNumber - 1 - i}.`);
         answersArray.push(+playerAnswer);
   
       } else if (playerAnswer < randomNumber) {
-        alert(`Меньше!`);
+        alert(`Загаданное число больше! Количество оставшихся попыток - ${attemptsNumber - 1 - i}.`);
         answersArray.push(+playerAnswer);
       }
     }
