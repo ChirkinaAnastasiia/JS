@@ -46,6 +46,5 @@ cart.print();
 
 cart.clear();
 console.log(cart.items, cart.totalPrice, cart.count);
-cart.print();
 
 
