@@ -1185,18 +1185,510 @@
 ///////////////////////////                       ///////////////////////////
 
 
+// const obj = {};
+// const obj1 = new Object();
+
+// const emptyObject = Object.create(null);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+//   'favorite food': 'pizza',
+//   favoriteDrink: ['coffee', 'tea',],
+//   age: 10,
+//   status: {
+//     alive: true,
+//     free: false,
+//   },
+//   sayHi() {
+//     console.log('Hello!');
+//   },
+// };
+
+// console.log(user.age);
+// console.log(user['favorite food']);
+// console.log(user.favoriteDrink);
+// console.log(user['firstName']);
+// console.log(user.status.alive);
+// user.sayHi();
+
+// delete user.lastName;
+// console.log(user.lastName);
+
+// user.firstName = null;
+// console.log(user.firstName);
+
+////////////////////////////////
+// const obj = {
+//   first: 1,
+//   second:2,
+// };
+
+// const number = 'first';
+// console.log(obj[number]);
+// console.log(obj);
+
+////////////////////////////////
+// const user = {
+//   age: 30,
+//   'favorite food': 'pizza',
+//   favoriteDrink: ['coffee', 'tea',],
+//   status: {
+//     alive: true,
+//     free: false,
+//   },
+//   sayHi() {
+//     console.log('Hello!');
+//   },
+// };
+
+// user.login = '1a5Xe7';
+// user.status.free = true;
+// console.log(user);
+
+////////////////////////////////
+// const firstName = 'John';
+// const lastName = 'Doe';
+
+// const user = {
+//   firstName: firstName,
+//   lastName: lastName,
+// };
+// console.log(user);
+
+// const user2 = {
+//   firstName,
+//   lastName,
+// };
+// console.log(user2);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+
+// const user2 = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+
+// console.log(user === user2);
+// user.firstName = 'Anna';
+// console.log(user);
+// console.log(user2);
+
+// const user3 = user2;
+// console.log(user3 === user2);
+// user2.firstName = 'Tom';
+// console.log(user2);
+// console.log(user3);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+
+// const decorObject = obj => {
+//   obj.age = 30;
+// };
+
+// decorObject(user);
+// console.log(user);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+// };
+
+// for (const prop in user) {
+//   console.log(`user.${prop} = ${user[prop]}`);
+// }
+
+// const keys = Object.keys(user);
+// console.log(keys);
+// for (const key of keys) {
+//   console.log(`user.${key} = ${user[key]}`);
+// }
+
+// const values = Object.values(user);
+// console.log(values);
+// for (const key of values) {
+//   console.log(key);
+// }
+
+// const entries = Object.entries(user);
+// console.log(entries);
+// for (const [key, value] of entries) {
+//   console.log(key, value);
+// }
 
 
+// const arr = [
+//   ["firstName", "John"],
+//   ["lastName","Doe"],
+//   ["age", 30],
+// ];
+// const obj = Object.fromEntries(arr);
+// console.log(obj);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+// };
+
+// console.log(user.hasOwnProperty('age'));
+// console.log(user.hasOwnProperty('hobby'));
+
+////////////////////////////////
+// const obj1 = {
+//   a: 1,
+//   b: {
+//     a: 2
+//   },
+// };
+
+// const obj2 = {
+//   c: 3,
+//   b: {
+//     d: 4
+//   },
+// };
+
+// // console.log(Object.assign(obj1, obj2));
+// // console.log(obj1); // перезаписывается
+// // console.log(obj2); // не меняется
+
+// // const obj3 = Object.assign({}, obj1, obj2);
+// // console.log(obj3); // новый
+// // console.log(obj1); // не меняется
+// // console.log(obj2); // не меняется
+
+// // const obj3 = Object.assign({}, obj1, obj2, {a: 7});
+// // console.log(obj3);
+// // console.log(obj1);
+// // console.log(obj2);
+
+// const obj3 = Object.assign({}, obj1);
+// console.log(obj3); // другой объект
+// obj3.a = 10;
+// console.log(obj1.a);
+// console.log(obj3.a);
+
+// const obj4 = obj1; // один обект
+// obj4.a = 100;
+// console.log(obj4.a);
+// console.log(obj1.a);
+
+// const obj5 = {...obj1}; // другой объект
+// obj5.a = 77;
+// console.log(obj5.a); // свойства уникальные
+// console.log(obj1.a);
+// obj5.b.a = 88;
+// console.log(obj5.b.a); // обекты внутри те же, ссылки
+// console.log(obj1.b.a);
+
+// const obj6 = {...obj1, 'g': 9, ...obj3};
+// console.log(obj6); // а из obj3, приоритет последнего
+
+////////////////////////////////
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: ['a', 'b'],
+//   d: {
+//     e: {
+//       f: ['g', 'h'],
+//       i: ['j', 'k']
+//     }
+//   },
+//   l: 3,
+//   m: 4,
+// };
+
+// console.log(obj.d.e);
+// console.log(obj.d.e.f);
+// console.log(obj.d.e.f[0]);
+
+// const newObj = obj.d.e;
+// console.log(newObj);
+// console.log(newObj.f[0]);
+
+// // деструктуризация
+// // const {a, c, d} = obj;
+// // console.log(a);
+// // console.log(c);
+// // console.log(d);
+
+// // const {a, c, d:{e}} = obj;
+// // console.log(a);
+// // console.log(c);
+// // console.log(e);
+
+// // const {a,
+// //   c,
+// //   d:{
+// //     e: {
+// //     f, i
+// //     }
+// //   },
+// // } = obj;
+// // console.log(a);
+// // console.log(c);
+// // console.log(f);
+// // console.log(i);
+
+// const {a: newA, m = 8, y, z = 5} = obj;
+// console.log(newA);
+// console.log(m);
+// console.log(y);
+// console.log(z);
+
+////////////////////////////////
+// const obj1 = {
+//   a: {
+//     b: {
+//       c: [1, 2],
+//       d: [3, 4]
+//     }
+//   },
+// };
+
+// const obj2 = {
+//   a: {
+//     b: {
+//       c: [1, 2],
+//     }
+//   },
+// };
+
+// const obj3 = {
+//   a: {},
+// };
+
+// // const object = [obj1, obj2, obj3];
+// // object.forEach (item => {
+// //   // console.log(item);
+// //   console.log(item.a.b);
+// //   console.log(item.a.b.c);
+// // });
+
+// const object = [obj1, obj2, obj3];
+// object.forEach (item => {
+//   // console.log(item);
+//   console.log(item?.a?.b);
+//   console.log(item?.a?.b?.c);
+// });
+
+// const object2 = [obj1, obj2, obj3];
+// object2.forEach (item => {
+//   // console.log(item);
+//   console.log(item?.a?.b ?? 'null');
+//   console.log(item?.a?.b?.c ?? 'no prop');
+// });
+
+////////////////////////////////
+// const obj = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   sayHi() {
+//     console.log(`Hello, ${obj.firstName}!`);
+//     console.log(`Hello, ${this.firstName}!`);
+//     console.log(`My name is ${this.getFullName()}!`);
+//   },
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// obj.sayHi();
+// console.log(obj.getFullName());
+
+// const obj2 = {
+//   firstName: 'Ann',
+//   lastName: 'Hill',
+//   sayHi() {
+//     console.log(`My name is ${this.getFullName()}!`);
+//   },
+// };
+
+// obj2.getFullName = obj.getFullName;
+// console.log(obj.getFullName());
+// console.log(obj2.getFullName());
+// obj2.sayHi();
+
+// obj2.firstName = 'Tom';
+// obj.sayHi();
+// obj2.sayHi();
+
+////////////////////////////////
+// const user = {
+//   age: 30,
+//   'favorite food': 'pizza',
+//   favoriteDrink: ['coffee', 'tea',],
+//   status: {
+//     alive: true,
+//     free: false,
+//   },
+//   sayHi() {
+//     console.log('Hello!');
+//   },
+// };
+
+// const userJson = JSON.stringify(user);
+// console.log(userJson);
+
+// const userObject = JSON.parse(userJson); // новый объект, вложенные объекты тоже независимы
+// console.log(userObject);
+
+// const json = JSON.parse(JSON.stringify(user));
+// console.log(json);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   age: 30,
+// };
+
+// let key = prompt('What', 'age');
+// alert(user[key]);
+
+////////////////////////////////
+// const makeUser = (firstName, age) => {
+//   return {
+//     firstName: firstName,
+//     age,
+//   };
+// };
+
+// const user = makeUser('John', 30);
+// console.log(user);
+
+////////////////////////////////
+// const reservedWords = {
+//   let: 0,
+//   const: 1,
+//   return: 2,
+//   0: 'test',
+// };
+
+// console.log(reservedWords[0]);
+// console.log(reservedWords['0']);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   age: 30,
+// };
+
+// console.log(user.hobby === undefined);
+// console.log('hobby' in user);
+// console.log('age' in user);
+
+// let key = 'age';
+// console.log(key in user);
+
+// console.log(user.test);
+// console.log('test' in user);
+
+////////////////////////////////
+// const user = {
+//   sayHi: function() {
+//     console.log('Hi!');
+//   },
+//   sayBye() {
+//     console.log('Bye!');
+//   },
+// };
+
+// user.sayHi();
+// user.sayBye();
+
+////////////////////////////////
+// const user = {
+//   name: 'John',
+// };
+
+// let cloneUser = {};
+
+// for (const key in user) {
+//   cloneUser[key] = user[key];
+// }
+
+// console.log(cloneUser);
+// cloneUser.name = 'Anna';
+// console.log(user);
+// console.log(cloneUser);
+
+////////////////////////////////
+// const number = {
+//   a: 10,
+// };
+
+// console.log(number.a++);
+// console.log(number.a);
+
+////////////////////////////////
+// const fruits = {
+//   apple: 5,
+//   banana: 10,
+//   orange: 7,
+// };
+
+// const double = Object.fromEntries(
+//   Object.entries(fruits).map(([key, value]) => [key, value * 2])
+// );
+
+// console.log(double);
+// console.log(fruits.apple);
+// console.log(double.apple);
+
+////////////////////////////////
+// const user = {
+//   name: 'John',
+//   sayHi() {
+//     console.log('Hi!');
+//   },
+// };
+
+// let key = 'name';
+// let key2 = 'age';
+// console.log(user?.[key]);
+// console.log(user?.[key2]);
+
+// user.sayHi?.();
+// user.sayBye?.();
+
+// delete user?.name;
+// console.log(user.name);
+
+////////////////////////////////
+// let a = null;
+// let b = undefined;
+// let c = '';
+// let d = 0;
+
+// console.log(a ?? 'test');
+// console.log(b ?? 'test');
+// console.log(c ?? 'test');
+// console.log(d ?? 'test');
+// console.log(a ?? b ?? 'none');
+// console.log(a ?? b ?? c ?? d ?? 'none');
+
+// a ??= 7;
+// console.log(a);
+// d ??= 'str';
+// console.log(d);
 
 
-
-
-
-
-
-
-
-
-
-
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 9                             //
+///////////////////////////                       ///////////////////////////
 

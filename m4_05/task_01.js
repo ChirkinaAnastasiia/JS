@@ -7,7 +7,7 @@ for (let x = 1; x <= 10; x++) {
 
   for (let y = 1; y <= 10; y++) {
     pow = x ** y;
-    powCell += `    ${pow}     |`;
+    powCell += `${pow.toString().padStart(13, ' ')} |`;
   }
 
   console.log(powCell);
