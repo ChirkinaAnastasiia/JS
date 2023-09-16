@@ -8,11 +8,11 @@ const cart = {
   },
   add(itemName, itemPrice, itemCount = 1) {
     this.items.push(
-      {
-        itemName,
-        itemPrice,
-        itemCount,
-      }
+        {
+          itemName,
+          itemPrice,
+          itemCount,
+        },
     );
     this.increaseCount(itemCount);
   },
@@ -20,9 +20,8 @@ const cart = {
     return this.count + num;
   },
   calculateItemPrice() {
-    const realPrice = this.items.reduce((acc, item) => {
-      return acc + item.itemPrice * item.itemCount;
-    }, 0);
+    const realPrice = this.items.reduce((acc, item) =>
+      acc + item.itemPrice * item.itemCount, 0);
     return realPrice;
   },
   clear() {
