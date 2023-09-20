@@ -12,3 +12,18 @@ for (let x = 1; x <= 10; x++) {
 
   console.log(powCell);
 }
+
+
+// let table = [];
+
+// for (let i = 1; i <= 10; i++) {
+//   let row = {};
+
+//   for(let j = 1; j <= 10; j++) {
+//     row[j] = i ** j;
+//   }
+
+//   table.push(row);
+// }
+
+// console.table(table);

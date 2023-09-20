@@ -483,6 +483,270 @@
 //                             Модуль 4 Урок 3                             //
 ///////////////////////////                       ///////////////////////////
 
+// console.log(10 > 5);
+// console.log(10 < 5);
+// console.log(10 >= 10);
+// console.log(10 <= 5);
+// console.log('14' > '2');
+// console.log('14' < '2');
+// console.log(5 == '5');
+// console.log(5 === '5');
+// console.log(5 != '5');
+// console.log(5 !== '5');
+// console.log(null == 0);
+// console.log(null == undefined);
+// console.log(null === 0);
+// console.log(null === undefined);
+// console.log(true > 8);
+// console.log(false == 0);
+// console.log(true === 1);
+// console.log('one' > 'zero');
+// console.log('One' < 'zero');
+// console.log('ё' > 'а');
+// console.log('А' < 'Я');
+
+//////////////////////////////////
+// console.log(true || true);
+// console.log(true || false);
+// console.log(false || true);
+// console.log(false || false);
+
+// let a = 5;
+// let b = 'abc';
+// let c = 0;
+// let d = '';
+// console.log(a || b);
+// console.log(b || c);
+// console.log(d || a);
+// console.log(d || c);
+// console.log(c || b || a);
+// console.log(b || c || a);
+// console.log(d || c || a);
+// console.log(d || c || d);
+
+// a ||= b; // a ||= (a = b)
+// console.log(a);
+// c ||= b;
+// console.log(c);
+
+// let userComment = '';
+// // userComment ||= 'no comments';
+// // console.log(userComment);
+
+// if (userComment == false) {
+//   userComment = 'no comments';
+// }
+// console.log(userComment);
+
+//////////////////////////////////
+// console.log(true && true);
+// console.log(true && false);
+// console.log(false && true);
+// console.log(false && false);
+
+// let a = 5;
+// let b = 'abc';
+// let c = 0;
+// let d = '';
+// console.log(a && b);
+// console.log(b && c);
+// console.log(d && a);
+// console.log(c && d);
+// console.log(a || c && b || d);
+// console.log(a && d || c && b);
+
+// a &&= b;
+// console.log(a);
+// c &&= b;
+// console.log(c);
+
+// let greeting = 'Hello';
+// // greeting &&= greeting + ', friend!';
+// // console.log(greeting);
+
+// if (greeting) {
+//   greeting = greeting + ', friend!';
+// }
+// console.log(greeting);
+
+// let a = 10;
+// a && console.log('something');
+// let b;
+// b && console.log('something'); // undefined
+// day === "monday" && foo();
+
+//////////////////////////////////
+// result = !value;
+// console.log(!1);
+// console.log(!!1);
+// console.log(!false);
+// console.log(!!false);
+// console.log(!'abc');
+// console.log(!!'abc');
+// console.log(!'');
+// console.log(!!'');
+
+//////////////////////////////////
+// console.log(typeof 10 === 'number');
+// console.log(typeof '10' === 'number');
+// console.log(typeof 10 === 'string');
+// console.log(typeof true === 'boolean');
+// console.log(typeof null === 'object');
+// console.log(typeof undefined === 'undefined');
+
+//////////////////////////////////
+// const a = 5;
+// if (a > 4) {
+//   console.log(a);
+// }
+
+// if (a >= 10) {
+//   console.log(a);
+// } else {
+//   console.log(a * 3);
+// }
+
+// if (a > 10 && a < 100) {
+//   console.log(a);
+// } else if (a === 5) {
+//   console.log(a - 2);
+// } else {
+//   console.log(a + 10);
+// }
+
+//////////////////////////////////
+// const b = '';
+// if (!b) {
+//   console.log('empty');
+// }
+
+// if (b) {
+//   console.log('empty'); // не выполнится
+// } else {
+//   console.log('empty');
+// }
+
+//////////////////////////////////
+// const user = {
+//   age: 30,
+//   // name: '',
+// };
+
+// if (!user.name) {
+//   console.log('noname');
+// }
+
+// // let value = 0;
+// // if (externalValue) {
+// //   value = externalValue;
+// // }
+// // const value = externalValue || 0;
+// const value = externalValue ?? 0;
+
+//////////////////////////////////
+// const sumPositiveNumbers = (a, b) => {
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     return `один из аргументоа не число`;
+//   }
+
+//   if (a <= 0 || b <= 0) {
+//     return `одно из чисел отрицательное`;
+//   }
+
+//   return a + b;
+// };
+
+// console.log(sumPositiveNumbers('8', 10));
+// console.log(sumPositiveNumbers(-6, 10));
+// console.log(sumPositiveNumbers(3, 10));
+
+//////////////////////////////////
+// console.log(5 < 1 ? 'true' : 'false');
+// console.log(5 > 1 ? 'true' : 'false');
+
+// 5 > 1 ? console.log('true') : console.log('false'); // не делать так!
+// // возвращает не значение, а то что возвращает console.log
+
+// const password = prompt('enter password');
+// (password === '123') ?
+//   alert('come in') : alert('go away'); // не делать так!
+// // не присваивает значение переменной, а выполняет различный код, в зависимости от условия
+
+// let value = 10;
+// console.log(value >= 0 ? value : -value);
+// value = -5;
+// console.log(value >= 0 ? value : -value);
+// const result = (value >= 0 ? value : -value);
+// console.log(result);
+
+// let age = 108;
+// let res = 
+//   (age >= 18 && age < 100) ? 'adult' :
+//   (age < 18 && age >= 13) ? 'teenager' :
+//   (age < 13) ? 'child' :
+//   'centenarian';
+
+// console.log(res);
+
+//////////////////////////////////
+// let discount = 0;
+// const price = 1000;
+// const clientStatus = 'gold';
+
+// // if (clientStatus == 'silver') {
+// //   discount = price * 0.05;
+// // }
+// // if (clientStatus == 'gold') {
+// //   discount = price * 0.08;
+// // }
+// // if (clientStatus == 'diamond') {
+// //   discount = price * 0.1;
+// // }
+// // const totalPrice = price - discount;
+// // console.log(totalPrice);
+
+
+// switch (clientStatus) { // clientStatus === ''
+//   case 'silver':
+//     discount = price * 0.05;
+//     break;
+//   case 'gold':
+//     discount = price * 0.08;
+//     // break;
+//   case 'diamond':
+//     discount = price * 0.1;
+//     break;
+//   default:
+//     discount = 0;
+// }
+// const totalPrice = price - discount;
+// console.log(totalPrice);
+
+//////////////////////////////////
+// const a = 1;
+// switch (true) {
+//   case a > 5:
+//     console.log('a > 5');
+//     break;
+//   case a > 2 && a != 4:
+//     console.log('3-5');
+//     break;
+//   default:
+//     console.log(a);
+// }
+
+// switch (a) {
+//   case 1:
+//   case 2:
+//     console.log('1 or 2');
+//     break;
+//   case 3:
+//     console.log('3');
+//     break;
+//   default:
+//     console.log(a);
+// }
+
 
 
 ///////////////////////////                       ///////////////////////////
@@ -491,9 +755,148 @@
 
 
 
+
 ///////////////////////////                       ///////////////////////////
 //                             Модуль 4 Урок 5                             //
 ///////////////////////////                       ///////////////////////////
+
+// let n = 0;
+// // while (n < 3) {
+// //   console.log(n);
+// //   n++;
+// // }
+
+// // while (n < 3) {
+// //   n++;
+// //   console.log(n);
+// // }
+
+// // do {
+// //   console.log(n);
+// //   n++;
+// // } while (n < 3);
+
+// // do {
+// //   n++;
+// //   console.log(n);
+// // } while (n < 3);
+
+// // do {
+// //   n++;
+// //   console.log(n);
+// // } while (n = 0);
+
+// // do {
+// //   console.log(n);
+// //   n++;
+// // } while (n = 0);
+
+// while (n < 5) {
+//   console.log(n);
+//   n++;
+
+//   if (n === 3) break;
+// }
+
+//////////////////////////////////
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+
+//   if (i === 3) break;
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 3) continue;
+
+//   console.log(i);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (!(i % 2)) continue;
+
+//   console.log(i);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5 || i === 6) continue;
+
+//   console.log(i);
+// }
+
+//////////////////////////////////
+// let i = 0;
+// for (;;) {
+//   // i += 1;
+//   console.log(i);
+//   i += 1;
+
+//   if (i >= 5) break;
+// }
+
+//////////////////////////////////
+// for (let i = 1; i < 10; i++) {
+//   console.log('---------------------');
+
+//   for(let j = 1; j < 10; j++) {
+//     console.log(`${i} x ${j} = ${i * j}`);
+//   }
+// }
+
+//////////////////////////////////
+// let table = [];
+// for (let i = 1; i <= 10; i++) {
+//   let row = {};
+
+//   for(let j = 1; j <= 10; j++) {
+//     row[j] = i ** j;
+//   }
+
+//   table.push(row);
+// }
+// console.table(table);
+
+//////////////////////////////////
+// const foo = () => {
+//   for (let i = 1; i < 10; i++) {
+//     console.log('---------------------');
+  
+//     for(let j = 1; j < 10; j++) {
+//       console.log(`${i} x ${j} = ${i * j}`);
+
+//       // if (i > 3) return;
+//     }
+
+//     if (i >= 3) return;
+//   }
+
+//   console.log('не сработает');
+// };
+// foo();
+
+//////////////////////////////////
+// for (let i = 1; i <= 2; i++) {
+
+//   for(let j = 1; j <= 2; j++) {
+//     let input = prompt(`координаты ${i}, ${j}`);
+
+//     if (!input) break;
+//   }
+// }
+// alert('готово');
+
+// outer: for (let i = 1; i <= 2; i++) {
+
+//   for(let j = 1; j <= 2; j++) {
+//     let input = prompt(`координаты ${i}, ${j}`);
+
+//     if (!input) break outer; // разорвать внешний цикл
+//   }
+// }
+// alert('готово');
 
 
 
@@ -1687,8 +2090,490 @@
 // d ??= 'str';
 // console.log(d);
 
+// const fruits = {
+//   apple: 5,
+//   banana: 10,
+//   orange: 7,
+// };
+
+// Object.keys(fruits).forEach((key) => {
+//   console.log(key);
+// });
+
+// Object.values(fruits).forEach((value) => {
+//   console.log(value);
+// });
+
+// const word = 'abcdef';
+// for (const letter of word) {
+//   console.log(letter);
+// }
 
 ///////////////////////////                       ///////////////////////////
 //                             Модуль 4 Урок 9                             //
 ///////////////////////////                       ///////////////////////////
 
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+// };
+
+// // // Object.defineProperty(user, 'nickName', {value: 'Zero'});
+// // // console.log(user.nickName);
+
+// // Object.defineProperty(user, 'firstName', {
+// //   configurable: true,
+// //   enumerable: true,
+// //   writable: true,
+// // });
+// // // user.firstName = 'Tom';
+// // // console.log(user.firstName);
+
+// // Object.defineProperty(user, 'nickName', {
+// //   value: 'Zero',
+// //   configurable: true,
+// //   enumerable: true,
+// //   writable: true,});
+// // console.log(user.nickName);
+
+// // // Object.defineProperty(user, 'fullName', {
+// // //   get() {
+// // //     return `${this.firstName} ${this.lastName}`;
+// // //   },
+// // //   set(value) {
+// // //     this.name = value;
+// // //   },
+// // // });
+// // // console.log(user.fullName);
+// // // user.fullName = 'Ann Hill';
+// // // console.log(user.fullName);
+// // // console.log(user.name);
+// // // user.name = 'Benjamin';
+// // // console.log(user.fullName);
+// // // console.log(user.name);
+
+// Object.defineProperties(user, {
+//   favoriteFood: {value: 'pizza', writable: true},
+//   favoriteSeason: {value: 'summer', enumerable: false},
+// });
+// console.log(user);
+
+// console.log(Object.getOwnPropertyDescriptor(user, 'favoriteFood'));
+// console.log(Object.getOwnPropertyDescriptors(user));
+
+// const userClone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(user));
+// console.log(userClone);
+// userClone.age = 40;
+// console.log(user);
+// console.log(userClone);
+
+////////////////////////////////
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+//   get comment() {
+//     return this.trueComment;
+//   },
+//   set comment(value) {
+//     if (typeof value === 'string') {
+//       this.trueComment = value;
+//     }
+//   },
+//   trueComment: 'none',
+// };
+
+// console.log(user);
+// console.log(user.comment);
+// user.comment = 123;
+// console.log(user.comment);
+// user.comment = 'hi, there';
+// console.log(user.comment);
+// console.log(user.trueComment);
+
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   set fullName(value) {
+//     [this.firstName, this.lastName] = value.split(' ');
+//   },
+// };
+
+// console.log(user.fullName);
+// user.fullName = 'Ann Hill';
+// console.log(user.fullName);
+// console.log(user);
+
+// const user = {
+//   get userName() {
+//     return this._name;
+//   },
+//   set userName(value) {
+//     if (value.length < 3) {
+//       console.log(`too short name`);
+//       return;
+//     }
+
+//     this._name = value;
+//   },
+// };
+
+// user.userName = 'John';
+// console.log(user.userName);
+// user.userName = 'An';
+// console.log(user.userName);
+// user.userName = 'Ann';
+// console.log(user.userName);
+// console.log(user);
+
+// delete user.userName;
+// console.log(user);
+// console.log(user.userName);
+
+////////////////////////////////
+// const favor = new Map();
+// favor.set('fruit', 'banana');
+// favor.set('vegetable', 'tomato');
+// favor.set('berry', 'cherry');
+// favor.set('nut', 'huzelnut');
+
+// console.log(favor);
+// console.log(favor.get('berry'));
+// console.log(favor.get('meat'));
+
+// console.log(favor.keys());
+// console.log(favor.values());
+// console.log(favor.entries());
+
+// console.log([ ...favor.keys() ]);
+// console.log([ ...favor.values() ]);
+// console.log([ ...favor.entries() ]);
+
+// console.log(favor.size);
+// console.log(favor.has('fruit'));
+// console.log(favor.has('meat'));
+// // console.log(favor.delete('nut'));
+// // console.log(favor.get('nut'));
+
+// // favor.clear()
+// // console.log(favor);
+
+// for (const key of favor) {
+//   console.log(key);
+// }
+
+// for (const [key, value] of favor) {
+//   console.log(key);
+//   console.log(value);
+// }
+
+// const bakery = {
+//   title: 'bakery',
+//   taste: 'sweet',
+// };
+// favor.set(bakery, 'pie');
+// console.log(favor);
+
+// favor.forEach((value, key, map) => {
+//   console.log(value, key);
+// });
+
+////////////////////////////////
+// const bakery = {
+//   title: 'bakery',
+//   taste: 'sweet',
+// };
+
+// const cheese = {
+//   title: 'cheese',
+//   taste: 'salty',
+// };
+
+// const favor = new WeakMap();
+// favor.set(bakery, 'pie');
+// favor.set(cheese, 'cheddar');
+// console.log(favor);
+
+// console.log(favor.size);
+// console.log(favor.get(cheese));
+// console.log(favor.has(cheese));
+// console.log(favor.delete(cheese));
+// console.log(favor);
+
+////////////////////////////////
+// const map = new Map();
+// map.set('fruit', 'banana');
+// map.set(1, 77);
+// map.set(true, false);
+// console.log(map);
+
+////////////////////////////////
+// const obj = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 30,
+// };
+// const map = new Map(Object.entries(obj));
+// console.log(map);
+// console.log(map.get('age'));
+
+
+// const map2 = new Map();
+// map2.set('name', 'John');
+// map2.set('age', 30);
+// // const obj2 = Object.fromEntries(map2.entries());
+// const obj2 = Object.fromEntries(map2);
+// console.log(obj2);
+
+////////////////////////////////
+// const original = new Map([[1, 'one'], [2, 'two']]);
+
+// const clone = new Map(original);
+// console.log(original === clone);
+
+// const clone2 = original;
+// console.log(original === clone2);
+
+////////////////////////////////
+// const first = new Map([[1, 'one']]);
+// const second = new Map([[2, 'two']]);
+// console.log(first);
+// console.log(second);
+
+// const merged = new Map([ ...first, ...second, [3, 'three']]);
+// console.log(merged);
+
+////////////////////////////////
+// const obj1 = {name: 'Ann'};
+// const obj2 = obj1;
+// const map = new Map();
+// map.set(obj1, 'value1');
+// map.set(obj2, 'value2');
+// console.log(map.size);
+// console.log(map.get(obj1));
+// console.log(map.get(obj2));
+
+
+// const obj3 = {name: 'Ann'};
+// const obj4 = {name: 'Ann'};
+// const map2 = new Map();
+// map2.set(obj3, 'value3');
+// map2.set(obj4, 'value4');
+// console.log(map2.size);
+// console.log(map2.get(obj3));
+// console.log(map2.get(obj4));
+
+////////////////////////////////
+// const number = new Set([1, 2, 3, 4, 4, 3]);
+// console.log(number);
+
+// const array = [1, 2, 7, 2, 1, 8, 9, 9, 8];
+// console.log(array);
+// console.log([ ...new Set(array) ]);
+
+// console.log(Array.from(new Set([1, 2, 7, 2, 1, 8, 9, 9, 8])));
+// console.log(Array.from(new Set(array)));
+
+////////////////////////////////
+// const fruits = new Set();
+// fruits.add('banana');
+// fruits.add('orange');
+// fruits.add('apple');
+// fruits.add('mango');
+// fruits.add('orange');
+// console.log(fruits);
+
+// console.log(fruits.has('mango'));
+// console.log(fruits.has('kiwi'));
+// console.log(fruits.size);
+// console.log(fruits.length);
+// // console.log(fruits.delete('mango'));
+// // console.log(fruits.delete('kiwi'));
+// // fruits.clear()
+// // console.log(fruits);
+
+// console.log(fruits.keys());
+// console.log(fruits.values());
+// console.log(fruits.entries());
+
+// console.log([ ... fruits.values() ]);
+// console.log(Array.from(fruits));
+
+// for (const value of fruits) {
+//   console.log(value);
+// }
+
+// fruits.forEach((value, valueAgain, set) => {
+//   console.log(value);
+// });
+
+////////////////////////////////
+// const one = {a: 1};
+// const two = {a: 1};
+// const set = new Set();
+// set.add(one).add(two);
+// console.log(set);
+
+
+// const three = {a: 1};
+// const four = three;
+// const set2 = new Set();
+// set2.add(three).add(four);
+// console.log(set2);
+
+// const set3 = new Set();
+// set3.add();
+// console.log(set3);
+// console.log(set3.has());
+// console.log(set3.delete());
+// console.log(set3.delete());
+// console.log(set3);
+
+////////////////////////////////
+// const set = new Set([
+//   {a: 1},
+// ]);
+// console.log(set.has({a: 1}));
+
+
+// const obj = {a: 1};
+// const set2 = new Set([obj]);
+// console.log(set2.has(obj));
+
+
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 10                            //
+///////////////////////////                       ///////////////////////////
+// const checkNum = n => {
+//   let x = Number(parseFloat(n));
+
+//   if (!Number.isFinite(x)) {
+//     console.warn(`${x} число не целое`);
+//     return;
+//   }
+
+//   if (x < 0) {
+//     console.error(`${x} число меньше нуля`);
+//     return;
+//   }
+
+//   if (x === 0) {
+//     console.log(`${x} число равно нулю`);
+//     // console.debug(`${x} число равно нулю`);
+//     return;
+//   }
+
+//   console.trace(`${x} число подходит`);
+// };
+
+// const arr = ['27', '-5', '270', '4.5', 0, '90', 'o', '30', '-7', '50', '1.75', '25'];
+
+// console.time('timer');
+// arr.forEach(checkNum);
+// console.timeEnd('timer');
+
+////////////////////////////////
+// const checkNum = obj => {
+//   try {
+//     const changeNumber = obj.result.lastNumber - obj.result.number;
+//     console.log(`изменение позиции в рейтинге ${obj.name} ${changeNumber}`);
+//   } catch(error) {
+//     // console.error('error');
+//     console.log(error);
+//     console.dir(error);
+//     console.warn(error.name);
+//     console.warn(error.message);
+//     console.warn(error.stack);
+//   } finally {
+//     console.log(true);
+//   }
+// };
+
+// const race = [
+//   {
+//     result: {
+//       number: '27',
+//       lastNumber: '6',
+//     },
+//     name: 'reno',
+//   },
+//   {
+//     result: {
+//       number: '-5',
+//       lastNumber: '5',
+//     },
+//     name: 'sitroen',
+//   },
+//   {
+//     name: 'vaz',
+//   },
+//   {
+//     result: {
+//       number: '4.5',
+//       lastNumber: '3',
+//     },
+//     name: 'opel',
+//   },
+// ];
+
+// race.forEach(checkNum);
+// console.warn(`остальные скрипты`);
+
+////////////////////////////////
+// {
+//   const fact = function(x) {
+//     if (x === 0) return 1;
+//     return x * fact(x - 1);
+//   };
+  
+//   console.log(fact(5));
+// }
+
+// // {
+// // const fact = function(x) {
+// //   if (x < 0) return 1;
+// //   return x * fact(x - 1);
+// // };
+
+// // console.log(fact(5));
+// // }
+
+////////////////////////////////
+// export const user = {};
+// const admin = {};
+// export {admin};
+// export {admin as siteAdmin};
+// export {admin, user};
+// export {admin as siteAdmin, user as siteUser};
+// export default function(a, b) {};
+// export {sayHi};
+// export {sayHi as default};
+
+// import {user, admin} from './script.js';
+// import {admin as siteAdmin, user as siteUser} from './script.js';
+// import user from './script.js';
+// import siteUser from './script.js';
+// import './script.js';
+// import * as say from './script.js';
+// say.sayHi();
+// say.sayBye();
+// export {sayHi as Hi};
+// import * as say from './script.js';
+// say.Hi();
+// import {default as User, sayHi} from './script.js';
+// import * as user from './script.js';
+// let User = user.default;
+// new User('John');
+
+// import User from './user.js';
+// import loginForm from './loginForm.js';
+// import func from './path/to/func.js';
+
+
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 10                            //
+///////////////////////////                       ///////////////////////////
