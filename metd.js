@@ -753,6 +753,263 @@
 //                             Модуль 4 Урок 4                             //
 ///////////////////////////                       ///////////////////////////
 
+// () => {};
+
+// const goToShop = (money) => {
+//   console.log('go to shop');
+
+//   console.log('go to get milk');
+//   const getMilk = (cash) => {
+//     if (cash >= 60) {
+//       cash -= 60;
+//       return money - cash;
+//     }
+//   };
+//   const milk = getMilk(money);
+//   console.log(-milk);
+
+//   console.log('go to get bread');
+//   const getBread = (cash) => {
+//     if (cash >= 40) {
+//       cash -= 40;
+//       return milk - cash;
+//     }
+//   };
+//   const bread = getBread(milk);
+//   console.log(-bread);
+
+//   return money - milk - bread;
+// };
+// const result = goToShop(100);
+// console.log(result);
+
+
+// const goToShop = (money) => { // так не делать!
+//   console.log('go to shop');
+
+//   console.log('go to get milk');
+//   const getMilk = (cash) => {
+//     if (cash >= 60) {
+//       money -= 60;
+//       return 'milk';
+//     }
+//   };
+//   const milk = getMilk(money);
+
+//   console.log('go to get bread');
+//   const getBread = (cash) => {
+//     if (cash >= 40) {
+//       money -= 40;
+//       return 'bread';
+//     }
+//   };
+//   const bread = getBread(money);
+
+//   console.log(money);
+
+//   return `${milk} ${bread}`;
+// };
+// const result = goToShop(100);
+// console.log(result);
+
+//////////////////////////////////
+// const getMilk = (cash) => {
+//   return 'milk';
+// };
+
+// const getBread = (cash) => {
+//   return 'bread';
+// };
+
+// const goToShop = (money, shoppingList) => {
+//   console.log('go to shop');
+//   console.log('go to get milk');
+
+//   const milk = getMilk(money);
+
+//   console.log('go to get bread');
+
+//   const bread = getBread(money);
+
+//   return `${milk} ${bread}`;
+// };
+// const result = goToShop(100);
+// console.log(result);
+
+//////////////////////////////////
+// bad();
+// const foo = () => { // предпочтительно!!
+//   console.log('foo');
+// };
+// foo();
+// const bar = function() {
+//   console.log('bar');
+// };
+// bar();
+// function bad() {
+//   console.log('BAD');
+// };
+// bad();
+
+// // анонимные
+// () => {
+
+// };
+
+// function(){
+
+// };
+
+// // самовызывающиеся
+// // в современной разработке смысла мало
+// (() => {
+//   console.log('foo');
+// })();
+
+// (function(){
+//   console.log('bar');
+// })();
+
+// {
+//   console.log('foo');
+// }
+
+//////////////////////////////////
+// const calc = (a, b, c, ...rest) => {
+//   console.log(a, b, c, rest);
+// };
+// calc(5, 15, 25, 35, 45);
+
+// const calc = (...rest) => {
+//   console.log(rest);
+// };
+// calc(5, 15, 25, 35, 45);
+
+// const calc = (a, b, c = 0) => {
+//   console.log(a + b + c);
+// };
+// calc(5, 15, 25);
+// calc(5, 15);
+// calc(5);
+
+//////////////////////////////////
+// const calc = (a, b, c = 0) => { // чистая функция
+//   return a + b + c;
+// };
+// calc(5, 15, 25);
+// calc(5, 15);
+// calc(5);
+
+// let x = 5;
+// const calc = (a, b, c = 0) => { // нечистая функция
+//   return a + b + c + x;
+// };
+// calc(5, 15, 25);
+// calc(5, 15);
+// x = 10;
+// calc(5);
+
+//////////////////////////////////
+// const calc = (a, b, c = 0) => {
+//   return a + b + c;
+//   console.log();
+// return undefined};
+// calc(5, 15, 25);
+
+// const calc = (a, b, c = 0) => {
+//   const sum = a + b + c;
+//   // if (sum > 10) return;
+//   if (sum > 50) return;
+
+//   return sum;
+// return undefined};
+// console.log(calc(5, 15, 25));
+
+//////////////////////////////////
+// const pow2 = (x) => {
+//   if (Number.isNaN(parseFloat(x))) {
+//     return `'${x}' is not a number`; 
+//   }
+
+//   return x ** 2;
+// };
+// console.log(pow2('four'));
+// console.log(pow2(4));
+
+// const pow2 = x => x ** 2;
+// console.log(pow2(4));
+
+//////////////////////////////////
+// const getTotalPrice = (money) => {   // можно
+//   return money * 2;
+// };
+
+// const getTotalPrice = (money) => {  // нельзя
+//   money *= 2;
+//   money +=100;
+//   return money;
+// };
+
+// const getTotalPrice = (money) => {  // нужно
+//   let resultMoney = money;
+//   return resultMoney;
+// };
+
+//////////////////////////////////
+// const getTotalPrice = (money, fn) => {  // callback функция
+//   let resultMoney = fn(money);
+//   return resultMoney;
+// };
+// console.dir(getTotalPrice);
+// // console.log(getTotalPrice(1000, (n) => n * 0.8));
+
+//////////////////////////////////
+// const printName = () => {
+//   console.log('John');
+// };
+// setTimeout(printName, 2000);
+
+// const printName = function() {
+//   console.log('John');
+// };
+// setTimeout(printName, 2000);
+
+// setTimeout(function() {
+//     console.log('John');
+// }, 2000);
+
+// setTimeout(() => {
+//     console.log('John');
+// }, 2000);
+
+//////////////////////////////////
+// const user = {
+//   name: 'John',
+//   age: 30,
+// };
+
+// const increaseAge = (n) => {
+//   const updatedUser = Object.assign({}, n);
+//   updatedUser.age += 1;
+//   return updatedUser;
+// };
+// increaseAge(user);
+// console.log(user.age);
+// // console.log(updatedUser.age);
+// const newUser = increaseAge(user);
+// console.log(newUser.age);
+// console.log(newUser);
+
+//////////////////////////////////
+
+
+
+
+
+
+
+
+
 
 
 
