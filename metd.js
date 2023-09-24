@@ -1001,13 +1001,70 @@
 // console.log(newUser);
 
 //////////////////////////////////
+// const showMessage = (from, text = anotherFunction()) => {
+//   // anotherFunction() выполнится только если не передан text
+//   // результатом будет значение text
+// };
+// showMessage('John');
+
+// const showMessage = (from, text) => {
+//   if (text === undefined) {
+//     text = 'no message';
+//   }
+//   // text = text || 'no message';
+//   // если значение text ложно, тогда присвоить параметру text значение по умолчанию
+//   // при этом пустая строка text === "" будет также считаться отсутствующим значением
+// };
+
+//////////////////////////////////
+// const showCount = (count) => {
+//   console.log(count ?? 'no');
+// };
+// showCount(0);
+// showCount(null);
+// showCount(undefined);
+// showCount();
+
+//////////////////////////////////
+// function makeCouple(recipe) {
+//   const green = 'green';
+//   const red = 'red';
+
+//   return recipe(green, red);
+// };
+// const result = makeCouple(function(a, b) {return `${a} + ${b}`});
+// console.log(result);
 
 
+// function isEven(value) {
+//   if (value === undefined || value === null) {
+//     return false;
+//   }
+
+//   return value % 2 == 0;
+// };
+// console.log(isEven());
 
 
+// function answerNumber() {
+//   console.log('21');
+// } 
+// const answer = answerNumber;
+// answerNumber();
+// answer();
 
 
+// function performOperation(operation) {
+//   const a = 5;
+//   const b = 10;
+//   return operation(a, b);
+// };
+// const sum = performOperation(function(one, two) {return one + two});
+// console.log(sum);
+// const res = performOperation(function(num1, num2) {return num1 ** (num1 / num2)});
+// console.log(res);
 
+//////////////////////////////////
 
 
 
