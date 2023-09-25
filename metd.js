@@ -1065,12 +1065,58 @@
 // console.log(res);
 
 //////////////////////////////////
+// const userProfile = {
+//   name: 'John',
+//   commentsQuantity: 15,
+// };
+// // const userInfo = (profile) => {
+// //   const { name, commentsQuantity} = profile;
+// const userInfo = ({ name, commentsQuantity }) => {
+//   if (!commentsQuantity) {
+//     return `User ${name} has no comments`;
+//   }
+
+//   return `User ${name} has ${commentsQuantity} comments`;
+// };
+// console.log(userInfo(userProfile));
+
+// const userProfile = {
+//   name: 'John',
+//   commentsQuantity: 15,
+// };
+// const userInfo = ({ name, commentsQuantity }) => {
+//   name = 'Ann';
+//   commentsQuantity = 100;
+//   if (!commentsQuantity) {
+//     return `User ${name} has no comments`;
+//   }
+
+//   return `User ${name} has ${commentsQuantity} comments`;
+// };
+// console.log(userInfo(userProfile));
+// console.log(userProfile);
+
+//////////////////////////////////
+// const firstPost = {
+//   id: 1,
+//   name: 'Ann',
+// };
+// // const createNewPost = (post, addedAt = Date()) => {
+// //   return {
+// //   ...post,
+// //   addedAt,
+// //   }
+// // };
+// const createNewPost = (post, addedAt = Date()) => ({
+//   ...post,
+//   addedAt,
+// });
+// const newObject = createNewPost(firstPost);
+// console.log(newObject);
+// console.log(firstPost);
 
 
-
-
-
-///////////////////////////                       ///////////////////////////
+////////////////////////                       ///////////////////////////
 //                             Модуль 4 Урок 5                             //
 ///////////////////////////                       ///////////////////////////
 
@@ -2889,5 +2935,355 @@
 
 
 ///////////////////////////                       ///////////////////////////
-//                             Модуль 4 Урок 10                            //
+//                             Модуль 4 Урок 11                            //
+///////////////////////////                       ///////////////////////////
+
+// const capitalize = str =>
+//   str[0].toUpperCase() + str.slice(1).toLowerCase();
+
+// const getFullName = ({ name, surname }) =>
+//   `${capitalize(name)} ${capitalize(surname)}`;
+
+// const printFullName = arr =>
+//   arr.forEach(item => void console.log(getFullName(item)));
+
+// const listPerson = [
+//   {
+//     name: 'JoHn',
+//     surname: 'DOE',
+//   },
+//   {
+//     name: 'aNN',
+//     surname: 'hill',
+//   },
+// ];
+// printFullName(listPerson);
+
+// //printFullName
+// //printFullName -> forEach
+// //printFullName -> forEach -> (item)=>{}
+// //printFullName -> forEach -> (item)=>{} -> console.log
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize -> toUppercase
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize -> slice
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize ->
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize -> toLowercase
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName -> capitalize
+// //printFullName -> forEach -> (item)=>{} -> console.log -> getFullName
+// //printFullName -> forEach -> (item)=>{} -> console.log
+// //printFullName -> forEach -> (item)=>{}
+// //printFullName -> forEach
+// //printFullName
+
+////////////////////////////////
+// const foo = () => {
+//   foo();
+// };
+// foo();
+
+// const foo = (n) => {
+//   console.log(n++);
+//   foo(n);
+// };
+// foo(0);
+
+// const foo = (obj) => {
+//   console.log(obj.n++);
+//   foo(obj);
+// };
+// foo({n: 0});
+
+// const foo = (n) => {
+//   n *= 3;
+//   if (n < 100) {
+//     return foo(n);
+//     // foo(n);
+//   }
+
+//   return n;
+// };
+// console.log(foo(2));
+
+// const foo = (n) => { // хвостовая
+//   n *= 3;
+//   if (n > 100) {
+//     return n;
+//   }
+
+//   return foo(n);
+// };
+// console.log(foo(2));
+
+////////////////////////////////
+// const bar = (n) => {
+//   n *= 2;
+//   if (n > 100) {
+//     return n;
+//   }
+
+//   return foo(n);
+// };
+
+// const foo = (n) => {
+//   n *= 3;
+//   // if (n > 100) {
+//   //   return n;
+//   // }
+
+//   return bar(n);
+// };
+// console.log(foo(2));
+
+////////////////////////////////
+// const pow = (n, power) => {
+//   if (power === 1) {
+//     return n;
+//   } else {
+//     return pow(n, power - 1) * n;
+//   }
+// };
+// console.log(pow(5, 5));
+// console.log(Math.pow(5, 5));
+// console.log(5 ** 5);
+
+////////////////////////////////
+// const factorial = n => {
+//   if (n === 0) {
+//     return 1;
+//   } else {
+//     return factorial(n - 1) * n;
+//   }
+// };
+// console.log(factorial(5));
+// console.log(1 * 2 * 3 * 4 * 5);
+
+////////////////////////////////
+// const fibo = n => {
+//   if (n <= 2) {
+//     return 1;
+//   } else {
+//     return fibo(n - 1) + fibo(n - 2);
+//   }
+// };
+// console.time('recursion');
+// console.log(fibo(30));
+// console.timeEnd('recursion');
+
+// const fibo2 = n => {
+//   let a = 1;
+//   let b = 0;
+//   let c = 0;
+//   while (n > 0) {
+//     c = a + b;
+//     b = a;
+//     a = c;
+//     n -= 1;
+//   }
+//   return b;
+// };
+// console.time('while');
+// console.log(fibo2(30));
+// console.timeEnd('while');
+
+////////////////////////////////
+// const one = function() {
+//   console.log('one');
+//   two();
+// };
+// const two = function() {
+//   console.log('two');
+//   three();
+// };
+// const three = function() {
+//   console.log('three');
+// };
+// // debugger;
+// one();
+
+// function one() {
+//   console.log('one', this);
+//   two();
+// };
+// function two() {
+//   console.log('two', this);
+//   three();
+// };
+// function three() {
+//   console.log('three', this);
+// };
+// one();
+
+////////////////////////////////
+// function thisFoo() {
+//   console.log(this);
+// };
+// thisFoo();
+
+// // a = 5;
+// // 
+// // let a = 5;
+// const a = 5;
+// function thisFoo() {
+//   console.log(this.a);
+// };
+// thisFoo();
+
+////////////////////////////////
+// const bar = () => {
+//   function thisFoo() {
+//     console.log(this);
+//   };
+//   thisFoo();
+// };
+// bar();
+
+////////////////////////////////
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   foo() {
+//     console.log(this);
+//   },
+// };
+// obj.foo();
+
+////////////////////////////////
+// function thisFoo() {
+//   console.log(this);
+// };
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   foo() {
+//     console.log(this);
+//   },
+//   bar: thisFoo,
+// };
+// obj.foo();
+// obj.bar();
+// const bar = obj.foo;
+// bar();
+
+////////////////////////////////
+// function thisFoo() {
+//   console.log(this);
+// };
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   bar: thisFoo,
+// };
+
+// const obj2 = {
+//   a: 3,
+//   b: 4,
+//   foo: obj.bar
+// };
+
+// obj2.foo();
+
+////////////////////////////////
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   bar() {
+//     console.log(this);
+//   },
+// };
+
+// const bar = function(cb) {
+//   cb();
+// };
+// bar(obj.bar);
+
+////////////////////////////////
+// function thisFoo(a, b, c, ...arg) {
+//   console.log(a, b, c, arg);
+//   console.log(this);
+// };
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   bar() {
+//     console.log(this);
+//   },
+// };
+
+// thisFoo.call(obj, 1, 2, 3, 4);
+// thisFoo.apply(obj, [1, 2, 3, 4]);
+
+// thisFoo.bind(obj);
+// const bar = thisFoo.bind(obj, 1, 2, 3, 4, 5);
+// bar();
+// const bar2 = thisFoo.bind(obj, 1, 2, 3);
+// bar2(3, 4, 5);
+
+////////////////////////////////
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   bar() {
+//     console.log(this);
+//   },
+// };
+
+// const arr = [1, 2, 3];
+// arr.forEach(item => {
+//   console.log(this);
+// });
+
+// arr.forEach(item => {
+//   console.log(this);
+// }, obj);
+
+// arr.forEach(function(item) {
+//   console.log(this);
+// }, obj);
+
+////////////////////////////////
+// 'use strict';
+// const arr = [1, 2, 3]; // no 'use strict'
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   sum(arr) {
+//     return arr.map(function(item) {
+//       console.log(this);
+//       return item + this.a + this.b
+//     }, this)
+//   },
+// };
+// const newArr = obj.sum(arr);
+// console.log(newArr);
+
+// const arr2 = [1, 2, 3]; // no 'use strict'
+// const obj2 = {
+//   a: 1,
+//   b: 2,
+//   // sum(arr) {
+//   //   return arr.map(item => {
+//   //     console.log(this);
+//   //     return item + this.a + this.b
+//   //   })
+//   // },
+//   // sum(arr) {
+//   //   return arr.map(item => item + this.a + this.b);
+//   // },
+//   sum: (arr) => {
+//     console.log(this);
+//     return arr.map(item => item + this.a + this.b);
+//   },
+// };
+
+// const newArr2 = obj2.sum(arr2);
+// console.log(newArr2);
+
+
+///////////////////////////                       ///////////////////////////
+//                             Модуль 4 Урок 12                            //
 ///////////////////////////                       ///////////////////////////
