@@ -3284,28 +3284,196 @@
 // console.log(newArr2);
 
 ////////////////////////////////
+// // let firstName = void 'John';
+// // console.log(firstName);
 
+// let firstName = 'John';
+// console.log(firstName);
+// firstName = void 0;
+// console.log(firstName);
+// firstName = 'Ann';
+// console.log(firstName);
+// console.log(void firstName);
 
+// console.log('Hello!');
+// console.log(void 'Hello!');
 
+// function bar() {};
+// console.log(typeof bar);
+// void function foo() {};
+// console.log(typeof foo);
 
+////////////////////////////////
+// function hello(name) {
+//   let phrase = `Hello, ${name}`;
 
+//   debugger;
 
+//   say(phrase);
+// };
+// function say(phrase) {
+//   console.log(phrase);
+// };
+// hello();
 
+////////////////////////////////
+// let counter = 0;
+// function foo(n) {
+//   counter++;
 
+//   if (counter === 7) {
+//     // counter = 0;
+//     return n;
+//   }
 
+//   return n + foo(n);
+// }
+// console.log(foo('*'));
 
+////////////////////////////////
+// const obj1 = {
+//   animal: 'cat',
+//   age: 2,
+//   sayMeow() {
+//     console.log('obj1', this);
+//   },
+//   obj2: {
+//     animal: 'dog',
+//     age: 1,
+//     sayWoof() {
+//       console.log('obj2', this);
+//     },
+//   },
+// };
+// obj1.sayMeow();
+// obj1.obj2.sayWoof();
 
+////////////////////////////////
+// const user = {
+//   name: 'John',
+// };
 
+// function sayHi() {
+//   console.log(this.name);
+// };
 
+// // sayHi();  // ошибка
 
+// user.foo = sayHi;
+// user.foo();
 
+// // user.sayHi();  // ошибка
 
+////////////////////////////////
+// function foo(a, b) {
+//   console.log(this);
 
+//   function bar() {
+//     console.log(this);
+//     // return this.a + this.b;
+//     return a + b;
+//   };
 
+//   console.log(bar());
+// };
+// foo(1, 2);
 
+////////////////////////////////
+// const obj1 = {
+//   animal: 'cat',
+//   age: 2,
+//   sayMeow() {
+//     console.log('obj1', this);
+//     function sayWoof() {
+//       console.log('obj2', this);
+//     };
 
+//     sayWoof();
+//   },
+// };
+// obj1.sayMeow();
 
+// const obj3 = {
+//   animal: 'cat',
+//   age: 2,
+//   sayMeow() {
+//     console.log('obj3', this);
+//     const sayWoof = () => {
+//       console.log('obj4', this);
+//     };
 
+//     sayWoof();
+//   },
+// };
+// obj3.sayMeow();
+
+////////////////////////////////
+// function sayName(surname) {
+//   console.log(this);
+//   console.log(this.name, surname);
+// };
+
+// const user = {
+//   name: 'Ann',
+// };
+
+// sayName.call(user, 'Hill');
+// sayName.apply(user);
+// console.log(user);
+
+////////////////////////////////
+// function count(num) {
+//   return this * num;
+// };
+// console.log(count(8));
+
+// const double = count.bind(2); // this = 2
+// console.log(double(7));
+// console.log(double(11));
+
+////////////////////////////////
+// const dev = {
+//   name: 'John',
+//   salary: 2500,
+//   getBonus(sum) {
+//     console.log(this.name, this.salary + sum);
+//   },
+// };
+
+// dev.getBonus(250);
+
+// const qa = {
+//   name: 'Ann',
+//   salary: 2000,
+// };
+
+// dev.getBonus.call(qa, 50);
+
+// dev.getBonus.bind(qa)(11);
+
+// qa.getBonus = dev.getBonus.bind(qa);
+// qa.getBonus(300);
+
+// console.log(qa);
+
+////////////////////////////////
+// // const btn = document.querySelector('button');
+// // btn.addEventListener('click', function() {
+// //   console.log(this);
+// //   this.style.backgroundColor = 'green';
+// // });
+
+// // const btn = document.querySelector('button'); // ошибка
+// // btn.addEventListener('click', () => {
+// //   console.log(this);
+// //   this.style.backgroundColor = 'green';
+// // });
+
+// const btn = document.querySelector('button');
+// btn.addEventListener('click', (e) => {
+//   console.log(this);
+//   e.target.style.backgroundColor = 'red';
+// });
 
 
 ///////////////////////////                       ///////////////////////////

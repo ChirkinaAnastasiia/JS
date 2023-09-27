@@ -20,6 +20,7 @@ const playGame = () => {
 
     return +first;
   };
+
   const firstNumber = getFirstNumber(prompt(`Введи первое число:`));
   if (firstNumber === undefined) {
     return alert(`Конец игры!`);
@@ -43,6 +44,7 @@ const playGame = () => {
 
     return +second;
   };
+
   const secondNumber = getSecondNumber(prompt(`Введи второе число:`));
   if (secondNumber === undefined) {
     return alert(`Конец игры!`);
@@ -55,6 +57,7 @@ const playGame = () => {
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
+
   const randomNumber = getRandomNumber(firstNumber, secondNumber);
 
 
@@ -66,16 +69,18 @@ const playGame = () => {
 
     return attempts;
   };
+
   const attemptsNumber = getAttemptsNumber();
 
+
+  const answersArray = [];
 
   const startGame = (attemptsNumber) => {
     const playerAnswer = prompt(`Введи свой вариант:`);
 
-    const answersArray = [];
-
     if (answersArray.includes(+playerAnswer)) {
-      alert(`Ты уже вводил это число, попытка не засчитывается!`); // не хочет работать  ???
+      alert(`Ты уже вводил это число, попытка не засчитывается!`);
+
       return startGame(attemptsNumber);
     }
 
