@@ -3605,18 +3605,280 @@
 // // console.log(users.sort(byField('name')));
 
 ////////////////////////////////
+// function outer() {
+//   const a = 'scope outer()';
 
-function outer() {
-  // область видимости функции outer()
-  let v = 'Я из области видимости функции outer()!'
+//   function inner() {
+//     console.log(a);
+//   };
 
-  function inner() {
-      // область видимости функции inner()
-      console.log(v) // 'Я из области видимости функции outer()!'
-  }
+//   // inner();
+//   return inner;
+// };
 
-  return inner
-}
+// // const foo = inner();
+// const foo = outer();
+// foo();
 
-const f = outer()
-f()
+////////////////////////////////
+// const z = 5;
+
+// const closeOne = () => {
+//   const x = 10;
+
+//   const closeTwo = (y) => {
+//     const closeThree = () => {
+//     // const y = 15;
+//     return x + y;
+//     };
+//   console.dir(closeThree);
+
+//   // return 5 + y;
+//     // return x + y + closeThree();
+//     return closeThree;
+//   };
+//   console.dir(closeTwo);
+
+//   // const closeThree = () => {
+//   //   const y = 15;
+//   //   return x + y;
+//   // };
+//   // console.dir(closeThree);
+
+//   // closeTwo(25);
+//   return closeTwo(25);
+// };
+// console.log(closeOne());
+// console.dir(closeOne);
+// console.dir(closeOne());
+// console.dir(closeOne()());
+
+////////////////////////////////
+// const z = 5;
+
+// const closeOne = () => {
+//   const x = 10;
+
+//   const closeTwo = (y) => {
+
+//     const closeThree = () => {
+//       return x + y;
+//     };
+
+//     return x + y + closeThree();
+//   };
+
+//   return closeTwo(25);
+// };
+// console.log(closeOne());
+
+////////////////////////////////
+// // const double = () => {
+// //   const x = 5;
+
+// //   return () => {
+// //     console.log(x * x);
+// //   };
+// // };
+
+// const double = (x) => {
+
+//   return () => {
+//     console.log(x * x);
+//   };
+// };
+
+// const pow = double(25);
+// console.dir(pow);
+// pow();
+
+// // const pow2 = () => {
+// //   console.log(x * x);
+// // };
+// // console.log(pow);
+// // console.log(pow2);
+// // pow2();
+
+////////////////////////////////
+// const bar = (x) => {
+//   const y = '2 closure';
+
+//   return (z) => {
+//     console.log(x, y, z);
+//   };
+// };
+
+// console.dir(bar);
+// const foo = bar('1 closure');
+// foo('3 no closure');
+
+// console.dir(foo);
+
+////////////////////////////////
+// const bar = (x) => (y) => (z) => x + y + z;
+
+// const foo1 = bar(1);
+// console.log(foo1);
+// const foo2 = foo1(2);
+// console.log(foo2);
+// const foo3 = foo2(3);
+// console.log(foo3);
+
+// const foo = bar(1)(2)(3);
+// console.log(foo);
+
+////////////////////////////////
+// function foo() {
+//   const a = 5;
+
+//   function bar() {
+//     console.log(a);
+//   };
+
+//   // return bar();
+//   return bar;
+// };
+
+// // foo();
+// const myFunc = foo();
+// myFunc();
+
+////////////////////////////////
+// const foo = (x) => {
+
+//   return (y) => {
+//     return x + y;
+//   };
+// };
+
+// const bar1 = foo(5);
+// const bar2 = foo(10);
+
+// console.log( bar1(3) );
+// console.log( bar2(3) );
+
+////////////////////////////////
+// const makeCounter = () => {
+//   let counter = 0;
+
+//   return () => {
+//     return counter++;
+//     // return ++counter;
+//   };
+// };
+
+// const count = makeCounter();
+// console.log(count());
+// console.log(count());
+// console.log(count());
+
+////////////////////////////////
+// const makeCounter = (counter) => {
+
+//   return () => {
+//     return counter++;
+//     // return ++counter;
+//   };
+// };
+
+// const count = makeCounter(0);
+// console.log(count());
+// console.log(count());
+// console.log(count());
+
+// const count2 = makeCounter(0);
+// console.log(count2());
+// console.log(count2());
+// console.log(count2());
+
+////////////////////////////////
+// function createIncrement(count) {
+//   // let count = 0;
+
+//   function increment() {
+//     count++;
+//     // ++count;
+//   };
+
+//   // let message = `count is ${count}`;
+//   function log() {
+//     let message = `count is ${count}`;
+//     console.log(message);
+//   };
+
+//   return [increment, log];
+// };
+
+// const [increment, log] = createIncrement(0);
+// log();
+// increment();
+// log();
+// increment();
+// log();
+// increment();
+// log();
+
+// const arr = createIncrement(0);
+// arr[0]();
+// arr[0]();
+// arr[1]();
+
+////////////////////////////////
+// function counter() {
+//   let state = 0;
+
+//   function increase() {
+//     state++;
+//   };
+
+//   function decrease() {
+//     state--;
+//   };
+
+//   function valueOf() {
+//     console.log(state);
+//   };
+
+//   return {
+//     increase,
+//     decrease,
+//     valueOf,
+//   };
+// };
+
+// // const ticktock = counter();
+// // ticktock.increase();
+// // ticktock.valueOf();
+
+// // ticktock.increase();
+// // ticktock.valueOf();
+
+// // ticktock.decrease();
+// // ticktock.valueOf();
+
+// const {increase, decrease, valueOf} = counter();
+// valueOf();
+// increase();
+// valueOf();
+
+// increase();
+// valueOf();
+
+// decrease();
+// valueOf();
+
+// const tick1 = counter();
+// tick1.valueOf();
+// tick1.increase();
+// tick1.valueOf();
+// tick1.decrease();
+// tick1.valueOf();
+
+// const tick2 = counter();
+// tick2.valueOf();
+// tick2.decrease();
+// tick2.valueOf();
+// tick2.increase();
+// tick2.valueOf();
+
+////////////////////////////////
