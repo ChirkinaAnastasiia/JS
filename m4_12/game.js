@@ -25,7 +25,7 @@
         if (answer === null) {
           const end = confirm('Ещё?');
           if (end) {
-            return start(language);
+            return start();
           } else {
           return alert(`Результат:\nВы - ${result.player}\nКомпьютер - ${result.computer}`);
           }
@@ -63,14 +63,14 @@
     
       const play = (player, computer) => {
         if (player !== answersArray[0] && player !== answersArray[1] && player !== answersArray[2]) {
-          return start(language);
+          return start();
         }
     
         if (player === answersArray[0] && computer === answersArray[0] ||
           player === answersArray[1] && computer === answersArray[1] ||
           player === answersArray[2] && computer === answersArray[2]) {
           alert(`Вы: ${player}\nКомпьютер: ${computer}\nНичья!`);
-          return start(language);
+          return start();
         }
     
         if (player === answersArray[0] && computer === answersArray[1] ||
@@ -78,7 +78,7 @@
           player === answersArray[2] && computer === answersArray[0]) {
           alert(`Вы: ${player}\nКомпьютер: ${computer}\nВы выиграли!`);
           result.player += 1;
-          return start(language);
+          return start();
         }
     
         if (player === answersArray[0] && computer === answersArray[2] ||
@@ -86,7 +86,7 @@
           player === answersArray[2] && computer === answersArray[1]) {
           alert(`Вы: ${player}\nКомпьютер: ${computer}\nВы проиграли!`);
           result.computer += 1;
-          return start(language);
+          return start();
         }
       };
 
