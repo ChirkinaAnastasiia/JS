@@ -6,6 +6,7 @@
 
   const INTERFACE_RUS = ['Вы - ', 'Компьютер - ', 'Вы выиграли!',
     'Компьютер выиграл!', 'Ничья!', 'Может ещё раз?', 'Результаты:'];
+
   const INTERFACE_ENG = ['You - ', 'Computer - ', 'You win!',
     'Computer wins!', 'Draw!', 'One more time?', 'Results:'];
 
@@ -31,12 +32,7 @@
     return function start() {
       const getPlayerAnswer = (answer) => {
         if (answer === null) {
-          const end = confirm(interfaceArray[5]);
-          if (end) {
-            return start();
-          } else {
-            return;
-          }
+          return;
         } else {
           answersArray.map(item => {
             if (item.startsWith(answer.toLowerCase()) && answer !== '') {
@@ -70,8 +66,13 @@
 
       const play = (player, computer) => {
         if (player === undefined) {
-          return alert(`${interfaceArray[6]}\n${interfaceArray[0]}` +
+          const end = confirm(interfaceArray[5]);
+          if (end) {
+            return start();
+          } else {
+            return alert(`${interfaceArray[6]}\n${interfaceArray[0]}` +
             `${result.player}\n${interfaceArray[1]} ${result.computer}`);
+          }
         }
 
         if (player !== answersArray[0] && player !== answersArray[1] &&
