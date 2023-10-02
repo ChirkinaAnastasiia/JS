@@ -3940,3 +3940,14 @@
 // })();
 
 ////////////////////////////////
+
+
+  // if (Number.isNaN(+playerMove) || playerMove === '' || !(playerMove.trim())) {
+  //   alert(`Некорректные данные! Нужно ввести число от 1 до ${playerBalls}.`);
+  //     return startRoundOne();
+  // }
+
+  // if (playerMove < 1 || playerMove > playerBalls) {
+  //   alert(`Некорректные данные! Нужно ввести число от 1 до ${playerBalls}.`);
+  //   return startRoundOne();
+  // }
