@@ -393,6 +393,9 @@
       playerScore = 0;
       computerScore = 0;
 
+      playerPriority = 0;
+      computerPriority = 0;
+
       start();
     } else {
       alert('До встречи в следующий раз!');
