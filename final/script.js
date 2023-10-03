@@ -1,4 +1,4 @@
 'use strict';
 
-// const startGame = window.rps('ENG');
-// startGame();
+const startGame = window.marbles();
+startGame();
