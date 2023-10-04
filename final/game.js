@@ -133,8 +133,8 @@
 
     const playerGuess = isCorrectPlayerGuess(prompt(
         `Ты: ${playerBalls}\nКомпьютер: ${computerBalls}\n` +
-      `Компьютер загадал число. ` +
-      `Твоя очередь угадывать, нужно ввести 'even' или 'odd':`));
+        `Компьютер загадал число. ` +
+        `Твоя очередь угадывать, нужно ввести 'even' или 'odd':`));
 
     if (playerGuess === null) {
       return null;
@@ -290,6 +290,8 @@
       if (playerMove === null) {
         if (confirm('Закончить игру?')) {
           return null;
+        } else {
+          return startRoundTwo();
         }
       }
 
@@ -299,11 +301,12 @@
         return;
       } else {
         computerMove = computerMovePlayerGuess();
-      }
-
-      if (computerMove === null) {
-        if (confirm('Закончить игру?')) {
-          return null;
+        while (computerMove === null) {
+          if (confirm('Закончить игру?')) {
+            return null;
+          } else {
+            computerMove = computerMovePlayerGuess();
+          }
         }
       }
 
@@ -343,9 +346,9 @@
 
         if (computerMove === null) {
           if (confirm('Закончить игру?')) {
-            alert('Конец игры!');
-
-            return;
+            return alert('Конец игры!');
+          } else {
+            return startRoundThree(playerPriority, computerPriority);
           }
         }
 
@@ -355,13 +358,12 @@
           return;
         } else {
           playerMove = playerMoveComputerGuess();
-        }
-
-        if (playerMove === null) {
-          if (confirm('Закончить игру?')) {
-            alert('Конец игры!');
-
-            return;
+          while (playerMove === null) {
+            if (confirm('Закончить игру?')) {
+              return alert('Конец игры!');
+            } else {
+              playerMove = playerMoveComputerGuess();
+            }
           }
         }
 
