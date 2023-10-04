@@ -3939,4 +3939,94 @@
 //   };
 // })();
 
+////////////////////////////////                       callback
+// function foo() {
+//   console.log(5);
+// };
+
+// const bar = foo;
+// bar();
+
+// const bar2 = foo();
+// console.log(bar2);
+
+////////////////////////////////
+// function foo(callback) {
+//   // console.log(bar());
+//   console.log(callback(3));
+// };
+
+// function bar(a) {
+//   return 2 + 2 * a;
+// };
+
+// function bar2(a) {
+//   return 1 + 1 * a;
+// };
+
+// foo(bar);
+// foo(bar2);
+
+////////////////////////////////
+// function foo(callback) {
+//   console.log(callback);
+// };
+
+// function bar(a) {
+//   return 2 + 2 * a;
+// };
+
+// foo(bar(5));
+
+////////////////////////////////
+// const str = 'Hello, world!';
+
+// function changeWords(str, fn) {
+//   let result = str.split(' ');
+
+//   for (let i = 0; i < result.length; i++) {
+//     result[i] = fn(result[i]);
+//   }
+//   return result;
+// };
+
+// function oneWord(word) {
+//   return word.toUpperCase();
+// };
+
+// function oneWord2(word) {
+//   return word.toLowerCase();
+// };
+
+// console.log(changeWords(str, oneWord));
+// console.log(changeWords(str, oneWord2));
+
+////////////////////////////////
+// function askQuestion(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// };
+
+// function showOk() {
+//   alert('Yes!');
+// };
+
+// function showCancel() {
+//   alert('No!');
+// };
+
+// askQuestion('Yes or no?', showOk, showCancel);
+
+// askQuestion(
+//   'Yes or no?',
+//   function() {alert('Yes!');},
+//   function() {alert('No!');}
+//   );
+
+// askQuestion(
+//   'Yes or no?',
+//   () => {alert('Yes!');},
+//   () => {alert('No!');}
+//   );
+
 ////////////////////////////////
